@@ -15,6 +15,8 @@ class Dictionary:
         print(f'{self.word} meaning: ', end='')
         print(self.dictionary[key])
     
+    def reset_dict(self):
+        self.dictionary = {}
 
     def __call__(self, key, *value) -> Any:
         self.word = key
@@ -32,7 +34,7 @@ def get_keyvalue():
 
 def commands():
     print('1.add a word with meaning\n2.display whole dictionary\
-          \n3.search a word \n4.exit')
+          \n3.search a word\n4.reset\n5.exit')
 
 def search_word():
     inpt_word = input('word: ')
@@ -58,6 +60,11 @@ def main():
                 search_word()
                 print('*' * 20)
             case '4':
+                d.reset_dict()
+                print('reseted...')
+                print('*' * 20)
+
+            case '5':
                 break
 
             case other:
