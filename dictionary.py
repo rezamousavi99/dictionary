@@ -43,21 +43,25 @@ def main():
 
     while True:
         commands()
-        inpt = input('Enter a command: ')
-        if inpt == '1':
-            get_keyvalue()
-            print('done')
-            print('*' * 20)
-        elif inpt == '2':
-            d.display_dictionary()
-            print('*' * 20)
-        elif inpt == '3':
-            search_word()
-            print('*' * 20)
-        elif inpt == '4':
-            break
-        else:
-            print('invalid...')
+        uinput = input('Enter a command: ')
+        match uinput:
+            case '1':
+                get_keyvalue()
+                print('done')
+                print('*' * 20)
+
+            case '2':
+                d.display_dictionary()
+                print('*' * 20)
+            
+            case '3':
+                search_word()
+                print('*' * 20)
+            case '4':
+                break
+
+            case other:
+                print('Invalid...')
 
 
 
