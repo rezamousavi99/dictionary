@@ -26,7 +26,7 @@ d = Dictionary()
 
 def get_keyvalue():
     word = input('word: ')
-    meanig = input('meaning: ').split()
+    meanig = input('meaning: ').split(',')
     d(word, *meanig)
     d.make_dict()
 
